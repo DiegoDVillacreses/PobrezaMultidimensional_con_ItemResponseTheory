@@ -1,3 +1,7 @@
+library(readstata13)
+library(data.table)
+library(magrittr)
+
 enem18dic = read.dta13("201812_enemdu.dta", convert.factors = F)
 enem18dic.var.labels = attr(enem18dic,"var.labels")
 enem18dic.var.labels = data.table(VarName = names(enem18dic),
